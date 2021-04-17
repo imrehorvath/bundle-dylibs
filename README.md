@@ -38,6 +38,7 @@ bundle-dylibs ~/Applications/Emacs.app
 ```
 
 After this you can move the `Emacs.app` to `/Applications` and use it normally.
+Now it should be standalone and is ready to be distributed to other macOS systems, without those dependent libraries pre-installed to them.
 
 ## References
 ### Inspired by
