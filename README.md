@@ -3,7 +3,7 @@ Command line tool to make standalone apps out of dependent apps on macOS, by pac
 
 ## Warning
 No liability! Use this tool at your own risk!
-It is allways recommended to make a copy of the app you want ot work on with this tool first, and apply it to the copy. Not the original!
+It is allways recommended to make a copy of the app you want ot work on first, and apply the changes to the copy. Not the original!
 
 ## Prerequisite
 - Xcode Command Line Tools (CLT) must be installed before running this tool.
