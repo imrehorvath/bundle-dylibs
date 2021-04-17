@@ -38,7 +38,7 @@ bundle-dylibs ~/Applications/Emacs.app
 ```
 
 After this you can move the `Emacs.app` to `/Applications` and use it normally.
-Now it should be standalone and is ready to be distributed to other macOS systems.
+Now it should be standalone and ready to be distributed to other macOS systems.
 
 ## Inspired by
 - https://github.com/renard/emacs-build-macosx/blob/master/build-emacs
