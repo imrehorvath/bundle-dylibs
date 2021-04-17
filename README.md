@@ -14,12 +14,11 @@ The dependency mentioned here comes from the extra dynamic libraries an app depe
 You can have such a situation when you build an app from source which depends on extra dynamic libraries, eg. the [GNU Emacs](https://www.gnu.org/software/emacs/).
 I use this tool to make a standalone `Emacs.app` out of the one which we get by building it from the official source.
 
-Prevoiusly I was using [David Caldwell's Emacs For Mac OS X](https://emacsformacosx.com/), which did provide me with a good service for a long time, but unfortunately, on newer macOS versions due to the enhanced security features, like app-based access control to folders like `Desktop`, etc. it become a bit of pain.
-That's because David's approach was to distribute a more universal build, which comes with multiple binaries pre-built for different versions of macOS and a `ruby` launcher script.
-This `ruby` launcher script is the culprit, why we need to grant access to the `ruby` interpreter and not the `Emacs.app` on recent macOS versions, when using `Emacs.app` from Emacs For Mac OS X.
-The launcher script makes it also slower to launch the application compared to launching directly a binary.
+Prevoiusly I was using [David Caldwell's Emacs For Mac OS X](https://emacsformacosx.com/), which did provide me with a good service for a long time, but unfortunately, on newer macOS versions due to the enhanced security features, like app-based access control to folders like `Desktop`, etc. it become a bit of a pain.
+That's because David's approach was to distribute a universal app, which comes with multiple binaries pre-built for different versions of macOS, and a `ruby` launcher script.
+This `ruby` launcher script is the culprit, why we need to grant access to the `ruby` interpreter and not the `Emacs.app` on recent macOS systems. It's also slower to launch compared to a pure binary.
 
-Due to these reasons, and due to the fact it's really easy to build Emacs from source, this tool was born.
+Since I don't need multiple binaries bundled and a slower launching mechanism, and due to the fact it's really easy to build Emacs from source, this tool was born.
 
 ## Example usage
 ### Build GNU Emacs from source and make it a standalone app
