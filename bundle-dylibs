@@ -61,7 +61,7 @@ process_dylibs() {
     for dylib in "${dylibarr[@]}"; do
 	name="$(basename $dylib)"
 	dest="$libdir/$name"
-	if [[ ! -e "$dest" ]]; then
+	if [[ ! -e $dest ]]; then
 	    cp "$dylib" "$dest"
 	    chmod 644 "$dest"
 	    install_name_tool -id "@rpath/$name" "$dest"
