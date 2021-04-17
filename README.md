@@ -16,7 +16,7 @@ You can have such a situation when you build an app from source which depends on
 ## Background
 Prevoiusly I was using David Caldwell's [Emacs For Mac OS X](https://emacsformacosx.com/), which did provide me with a good service for a long time, but unfortunately, on newer macOS versions due to the enhanced security features, like app-based access control to folders like `Desktop`, `Documents`, etc. it become a bit confusing for the unaware user to grant access to `ruby` after a fresh install/update.
 That's because David's approach was to distribute a universal app, which comes with multiple binaries pre-built for different versions of macOS, and a `ruby` launcher script.
-This `ruby` launcher script is the culprit, why we need to grant access to the `ruby` interpreter and not the `Emacs.app` on recent macOS systems. With this Emacs is also slower to launch compared to a pure binary.
+This `ruby` launcher script is the culprit, why we need to grant access to the `ruby` interpreter and not the `Emacs.app` on recent macOS systems. With this, Emacs is also slower to launch compared to a pure binary.
 Don't get me wrong, it's great what David has had done. It's just that I personally don't need multiple binaries bundled, and a slower launching mechanism, and due to the fact it's really easy to build Emacs from source, this tool was born.
 
 ## Example usage
