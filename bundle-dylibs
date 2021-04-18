@@ -85,7 +85,7 @@ if [[ $(basename $bundlepath) =~ \\.app$ ]] &&
        [[ -f $bundlepath/Contents/Info.plist ]] &&
        [[ -d $bundlepath/Contents/MacOS ]]; then
     for executable in $(find "$bundlepath/Contents/MacOS" -type f -perm +111); do
-	if [[ $(file $executable) =~ Mach-O ]]; then
+	if [[ $(file $executable) =~ Mach-O.*executable ]]; then
 	    process_executable "$executable"
 	fi
     done
