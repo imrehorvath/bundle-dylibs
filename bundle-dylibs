@@ -74,7 +74,7 @@ process_dylibs() {
 process_executable() {
     local executable="$1"
     local dylibs="$(list_dylibs $executable)"
-    if [[ ! -z $dylibs ]]; then
+    if [[ -n $dylibs ]]; then
 	mkdir -p "$libdir"
 	process_dylibs "$dylibs" "$executable"
 	install_name_tool -add_rpath "@executable_path/$relpath" "$executable"
