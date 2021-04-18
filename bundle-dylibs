@@ -1,7 +1,8 @@
 #!/bin/zsh
 
-# Copyright (c) 2021 Imre Horvath
+# Copyright (c) 2021 Imre Horvath <imi [dot] horvath [at] gmail [dot] com>
 # MIT License
+# Should work in /bin/sh and /bin/bash as well.
 # Inspired by:
 # https://github.com/renard/emacs-build-macosx/blob/master/build-emacs
 # https://github.com/trojanfoe/xcodedevtools/blob/master/copy_dylibs.py
@@ -54,11 +55,10 @@ list_dylibs() {
 process_dylibs() {
     local dylibs="$1"
     local file="$2"
-    local dylibarr=(${(s/ /)dylibs})
     local dylib
     local name
     local dest
-    for dylib in "${dylibarr[@]}"; do
+    for dylib in $(echo $dylibs); do
 	name="$(basename $dylib)"
 	dest="$libdir/$name"
 	if [[ ! -e $dest ]]; then
@@ -81,7 +81,7 @@ process_executable() {
     fi
 }
 
-if [[ $(basename $bundlepath) =~ \\.app$ ]] &&
+if [[ $(basename $bundlepath) =~ [.]app$ ]] &&
        [[ -f $bundlepath/Contents/Info.plist ]] &&
        [[ -d $bundlepath/Contents/MacOS ]]; then
     for executable in $(find "$bundlepath/Contents/MacOS" -type f -perm +111); do
