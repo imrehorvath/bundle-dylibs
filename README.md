@@ -25,9 +25,9 @@ Don't get me wrong, it's great what David has had done. It's just that I persona
 brew install gnutls
 brew install jansson
 
-curl -s -O https://ftp.gnu.org/gnu/emacs/emacs-27.2.tar.gz
+curl -s -O https://ftp.gnu.org/gnu/emacs/emacs-27.2.tar.xz
 # you might want to check the signature of the downloaded tarball before you continue
-tar xvzf emacs-27.2.tar.gz
+tar xf emacs-27.2.tar.xz
 cd emacs-27.2
 ./configure
 make
