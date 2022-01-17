@@ -26,14 +26,14 @@ brew install gnutls
 brew install jansson
 brew install xz
 
-curl -s -O https://ftp.gnu.org/gnu/emacs/emacs-27.2.tar.xz
+curl -O https://ftp.gnu.org/gnu/emacs/emacs-27.2.tar.xz
 tar xf emacs-27.2.tar.xz
 cd emacs-27.2
 ./configure
 make
 make install
 
-cp -a nextstep/Emacs.app ~/Applications
+cp -R nextstep/Emacs.app ~/Applications/Emacs.app
 bundle-dylibs ~/Applications/Emacs.app
 ```
 
