@@ -26,9 +26,9 @@ brew install gnutls
 brew install jansson
 brew install xz
 
-curl -O https://ftp.gnu.org/gnu/emacs/emacs-27.2.tar.xz
-tar xf emacs-27.2.tar.xz
-cd emacs-27.2
+curl -O https://ftp.gnu.org/gnu/emacs/emacs-28.1.tar.xz
+tar xf emacs-28.1.tar.xz
+cd emacs-28.1
 ./configure
 make
 make install
