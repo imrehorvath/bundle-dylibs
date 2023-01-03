@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021 Imre Horvath <imi [dot] horvath [at] gmail [dot] com>
 # MIT License
-# Should work in /bin/sh and /bin/bash as well.
+# Should work with /bin/sh or /bin/bash too.
 # Inspired by:
 # https://github.com/renard/emacs-build-macosx/blob/master/build-emacs
 # https://github.com/trojanfoe/xcodedevtools/blob/master/copy_dylibs.py
