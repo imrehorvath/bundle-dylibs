@@ -1,12 +1,11 @@
 # bundle-dylibs
 Command line tool to make standalone apps out of otherwise dependent apps on macOS, by packing the non-standard dynamic libraries into the application bundle.
 
-## Warning
-No liability! Use this tool at your own risk!
-It is allways recommended to make a copy of the app you want to work on, and apply the changes to the copy first.
+## Note
+Since this tool modifies the app bundle, it is recommended to make a copy of the app bundle you want to process first, and run the tool on the copy. Even though testing has shown no issues so far, use this tool at your own risk!
 
 ## Prerequisite
-- Xcode Command Line Tools (CLT) must be installed before running this tool.
+- Xcode Command Line Tools (CLT) must be installed before running this tool, since it uses commands from CLT.
 
 ## About
 This tool can be used to make a standalone, hence transferable -between different macOS systems- app out of otherwise dependent app.
