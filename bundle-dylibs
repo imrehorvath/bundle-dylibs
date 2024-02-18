@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 # Copyright (c) 2021 Imre Horvath <imi [dot] horvath [at] gmail [dot] com>
 # MIT License
@@ -81,9 +81,9 @@ process_executable() {
     fi
 }
 
-if [[ $(basename $bundlepath) =~ [.]app$ ]] &&
-       [[ -f $bundlepath/Contents/Info.plist ]] &&
-       [[ -d $bundlepath/Contents/MacOS ]]; then
+if [[ $(basename "$bundlepath") =~ [.]app$ ]] &&
+       [[ -f "$bundlepath/Contents/Info.plist" ]] &&
+       [[ -d "$bundlepath/Contents/MacOS" ]]; then
     find "$bundlepath/Contents/MacOS" -type f -perm +111 -print0 | while IFS= read -r -d '' executable; do
 	if [[ $(file $executable) =~ Mach-O.*executable ]]; then
 	    process_executable "$executable"
