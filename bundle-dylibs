@@ -90,7 +90,7 @@ if [[ $(basename $bundlepath) =~ [.]app$ ]] &&
 	fi
     done
 else
-    echo "\"$bundlepath\" does not apper to be an application bundle." 1>&2
+    echo "\"$bundlepath\" does not appear to be an application bundle." 1>&2
     exit 1
 fi
 
