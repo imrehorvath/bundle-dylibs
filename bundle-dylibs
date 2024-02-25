@@ -11,7 +11,7 @@ set -e
 
 relpath="../Frameworks"  # dylibs go to @executable_path/../Frameworks by default
 
-usage_text="Usage: $(basename $0) [-h] [-l relative_path] path_to_app
+usage_text="Usage: $(basename "$0") [-h] [-l relative_path] path_to_app
 
 -h Show this usage description and exit.
 
@@ -73,7 +73,7 @@ process_dylibs() {
 
 process_executable() {
     local executable="$1"
-    local dylibs="$(list_dylibs $executable)"
+    local dylibs="$(list_dylibs "$executable")"
     if [[ -n $dylibs ]]; then
 	mkdir -p "$libdir"
 	process_dylibs "$dylibs" "$executable"
